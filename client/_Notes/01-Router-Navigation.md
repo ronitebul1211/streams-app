@@ -40,3 +40,16 @@
 -  path extracted from address bar,
 -  when this route tested
 -  it will rendered only if extract url === path
+
+# Link Other Page
+
+## Wrong Navigation
+
+**use an a tag with href="path"**
+Why ?
+
+-  browser make new request to path
+-  dev server response with index.html
+-  Browser receives index.html file dumb old index.html including state data
+-  index.html list JS files in script tags, browser download & execute those scripts.
+-  app starts up
