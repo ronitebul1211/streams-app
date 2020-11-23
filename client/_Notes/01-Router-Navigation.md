@@ -53,3 +53,17 @@ Why ?
 -  Browser receives index.html file dumb old index.html including state data
 -  index.html list JS files in script tags, browser download & execute those scripts.
 -  app starts up
+
+## Right Navigation
+
+    ```
+      <Link to="/page-two">Navigate to page two</Link>
+     ```
+
+-  link implementation prevent the default behavior  
+   (send get request to index.html) for "popstate" event
+-  link use window.history.pushState({}, "/path") to change to url
+-  routes listen to url event, when changed path tested,  
+   match component render, not match component set to null.
+
+**When App Loaded once -> Single Page APP**
